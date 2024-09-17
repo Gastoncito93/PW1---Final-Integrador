@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    background-color: #333;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.menu li a:hover {
+    background-color: #555;
+}
+
+main {
+    padding: 20px;
+}
+
+.articulo {
+    display: flex;
+}
+
+.columna {
+    flex: 1;
+    margin-right: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+form label, form input, form button {
+    margin-bottom: 10px;
+}
