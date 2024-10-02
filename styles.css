@@ -1,18 +1,24 @@
 body {
+    margin-left: 25%;
+    margin-right: 25%;
+    border: #333 2px solid;
     font-family: Arial, sans-serif;
 }
 
 .menu {
+    border: #333 2px solid;
     display: flex;
     list-style-type: none;
     background-color: #333;
 }
 
 .menu li {
+    border: #333 2px solid;
     margin: 0 15px;
 }
 
 .menu li a {
+    border: #333 2px solid;
     color: white;
     text-decoration: none;
     padding: 10px 20px;
@@ -24,7 +30,19 @@ body {
 }
 
 main {
+    border: #333 2px solid;
     padding: 20px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    
 }
 
 .articulo {
