@@ -46,15 +46,16 @@ form label, form input, form button {
     margin-bottom: 10px;
 }
 
-.seccion-carrousel {
-    position: relative;
-    max-width: 600px; /* Ajusta según sea necesario */
-    margin: auto;
-    overflow: hidden;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 .carrusel {
     position: relative;
+    max-width: 600px; /* Cambia el tamaño del carrusel aquí */
+    margin: auto;
+    overflow: hidden;
 }
 
 .imagenes {
@@ -64,25 +65,30 @@ form label, form input, form button {
 
 .imagenes img {
     max-width: 100%;
-    display: block;
-    width: 100%; /* Asegúrate de que todas las imágenes ocupen el 100% del ancho */
+    display: none; /* Esconde todas las imágenes por defecto */
 }
 
-button {
+.imagenes img.activo {
+    display: block; /* Muestra la imagen activa */
+}
+
+.flecha {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(255, 255, 255, 0.8);
     border: none;
     cursor: pointer;
+    font-size: 24px;
     padding: 10px;
-    font-size: 18px;
+    border-radius: 5px;
+    z-index: 1;
 }
 
-.anterior {
+.izquierda {
     left: 10px;
 }
 
-.siguiente {
+.derecha {
     right: 10px;
 }
