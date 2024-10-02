@@ -21,4 +21,4 @@ function cambiarImagen(direccion) {
 }
 
 // Cambia la imagen cada 3 segundos
-setInterval(() => cambiarImagen(1), 3000);
+setInterval(() => cambiarImagen(1), 5000);
