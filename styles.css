@@ -45,3 +45,44 @@ form {
 form label, form input, form button {
     margin-bottom: 10px;
 }
+
+.seccion-carrousel {
+    position: relative;
+    max-width: 600px; /* Ajusta según sea necesario */
+    margin: auto;
+    overflow: hidden;
+}
+
+.carrusel {
+    position: relative;
+}
+
+.imagenes {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.imagenes img {
+    max-width: 100%;
+    display: block;
+    width: 100%; /* Asegúrate de que todas las imágenes ocupen el 100% del ancho */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.anterior {
+    left: 10px;
+}
+
+.siguiente {
+    right: 10px;
+}

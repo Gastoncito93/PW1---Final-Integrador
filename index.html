@@ -18,8 +18,23 @@
     </header>
 
     <main>
-        <h1>Bienvenido a nuestro sitio</h1>
-        <p>Este es un sitio web simple con varias páginas interconectadas. Explora nuestros servicios en la sección de artículos y contáctanos a través del formulario.</p>
+        <h1>Bienvenido a LibroMania</h1>
+        <p>Este es un sitio web creado para publicar y descargar libros.</p>
     </main>
+    <section class="seccion-carrousel">
+        <div class="carrusel">
+
+            <div class="imagenes">
+                <img src="img/ojo.jpg" alt="Imagen 1" class="activo">
+                <img src="img/mosaico.jpg" alt="Imagen 2">
+                <img src="img/hoja.jpg" alt="Imagen 3">
+            </div>
+            <button class="anterior" onclick="cambiarImagen(-1)">&#10094;</button>
+            <button class="siguiente" onclick="cambiarImagen(1)">&#10095;</button>
+        
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
