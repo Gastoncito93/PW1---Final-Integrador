@@ -1,17 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin-left: 15%;
     margin-right: 15%;
     border: #333 2px solid;
     font-family: Arial, sans-serif;
 }
-
 .menu {
     justify-content: space-around;
-    display: flex;
     border: #333 2px solid;
     display: flex;
     list-style-type: none;
     background-color: #333;
+    margin: 0px;
+    padding: 0px;
 }
 
 .menu li {
@@ -34,44 +44,102 @@ body {
 }
 
 main {
+    display: flex;
+    display: block;
     border: #333 2px solid;
-    padding: 20px;
+    padding: 5px;
 }
 
 h1 {
     display: flex;
     justify-content: center;
+    margin: 2px;
+    padding: 2px;
 }
 
 p {
     display: flex;
     justify-content: center;
-    
+    margin: 2px;
+        padding: 2px;
+
 }
 
+
+
+
+
+
+/* CSS Categoria*/
+.menu-lateral {
+    position: fixed;
+    top: 140px;
+    left: 258px;
+    background-color: #333;
+}
+
+.menu-lateral ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.menu-lateral ul li a:hover {
+    background-color: #555;
+}
+
+main.mainCategoria {
+    margin-left: 220px;
+    padding: 0px;
+    margin-left: 125px;
+    width: 100%px;
+}
+
+
+/* Estilo para la sección */
 .articulo {
-    display: flex;
+    border: #333 2px solid;
+    flex-wrap: wrap;
+    /* Permite que las columnas se distribuyan en varias filas */
 }
 
+/* Estilo para las columnas */
 .columna {
-    flex: 1;
-    margin-right: 10px;
+    border: #333 2px solid;
+    width: 50%;
+    /* Cada columna ocupa el 50% del ancho, formando filas de 2 columnas */
+    padding: 10px;
 }
 
+.columna h2 {
+    border: #333 2px solid;
+    font-size: 24px;
+}
+
+
+
+
+/*CSS Contacto*/
 form {
     display: flex;
     flex-direction: column;
     max-width: 400px;
 }
 
-form label, form input, form button {
+form label,
+form input,
+form button {
     margin-bottom: 10px;
 }
 
 
 .carrusel {
     position: relative;
-    max-width: 600px; /* Cambia el tamaño del carrusel aquí */
+    max-width: 1024px;
+    /* Cambia el tamaño del carrusel aquí */
     margin: auto;
     overflow: hidden;
 }
@@ -83,11 +151,13 @@ form label, form input, form button {
 
 .imagenes img {
     max-width: 100%;
-    display: none; /* Esconde todas las imágenes por defecto */
+    display: none;
+    /* Esconde todas las imágenes por defecto */
 }
 
 .imagenes img.activo {
-    display: block; /* Muestra la imagen activa */
+    display: block;
+    /* Muestra la imagen activa */
 }
 
 .flecha {

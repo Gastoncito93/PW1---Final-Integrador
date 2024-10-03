@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Principal</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -19,21 +21,23 @@
 
     <main>
         <h1>Bienvenido a LibroMania</h1>
-        <p>Este es un sitio web creado para publicar y descargar libros.</p>
+        <p>Este es un sitio web creado para publicar libros.</p>
+        <p>A continuacion mostramos los libros mas vendidos.</p>
     </main>
     <section class="seccion-carrousel">
         <div class="carrusel">
             <div class="imagenes">
-                <img src="img/hoja.jpg" alt="Imagen 1" class="activo">
-                <img src="img/mosaico.jpg" alt="Imagen 2">
-                <img src="img/ojo.jpg" alt="Imagen 3">
+                <img src="img/hoja.jpg" alt="Imagen 1" width="1500px" height="500px" class="activo">
+                <img src="img/mosaico.jpg" alt="Imagen 2" width="1500px" height="500px">
+                <img src="img/ojo.jpg" alt="Imagen 3" width="1500px" height="500px">
             </div>
             <button class="flecha izquierda" onclick="cambiarImagen(-1)">&#10094;</button>
             <button class="flecha derecha" onclick="cambiarImagen(1)">&#10095;</button>
         </div>
-    
+
     </section>
 
     <script src="script.js"></script>
 </body>
+
 </html>
