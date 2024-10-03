@@ -18,9 +18,17 @@
         </nav>
     </header>
 
-    <main>
+    <main class="centrado">
         <h2>Formulario de contacto</h2>
-        <form id="contactoForm">
+        <br>
+        <form class="centrado">
+            <br>
+            <ul class="sin-iconos">
+                <li>
+                    <label><input type="radio" name="opcion" value="trabajar"> Trabajar con nosotros. </label>
+                    <label><input type="radio" name="opcion" value="publicitar"> Publicitar tu libro. </label>
+                </li>
+            </ul>
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required maxlength="50">
             
@@ -32,8 +40,6 @@
             
             <button type="submit">Enviar</button>
         </form>
-
-        <div id="resultado"></div>
     </main>
 
     <script src="script.js"></script>

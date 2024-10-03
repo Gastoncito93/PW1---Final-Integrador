@@ -42,11 +42,12 @@ body {
 
 .menu {
     justify-content: space-around;
+    text-align: center;
     border: #333 2px solid;
     display: flex;
     list-style-type: none;
     background-color: #333;
-    margin: 0px;
+
     padding: 0px;
     /* Añadir la propiedad para que el menú sea fijo */
     position: fixed;
@@ -255,6 +256,32 @@ form button {
 body {
     background-color: var(--color-fondo-general);
     color: var(--color-texto);
+}
+
+
+/*css contacto*/
+.sin-iconos {
+    justify-content: center;
+    list-style-type: none;
+    display: flex;
+}
+h2{
+    border: none;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    max-width: 600px;
+    background-color: var(--color-fondo-general)
+}
+
+.centrado {
+    justify-items: center;
+    text-align: center;
+    max-width: 600px; 
+    margin: 40px auto; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: var(--color-fondo-general)
 }
 
 
