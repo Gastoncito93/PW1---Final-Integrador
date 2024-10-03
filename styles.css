@@ -1,7 +1,29 @@
+:root {
+    --color-fondo-general: #f4f4f4;
+    /* Fondo general de la página */
+    --color-fondo-tabla: #ffffff;
+    /* Fondo de las tablas */
+    --color-fondo-header: #333;
+    /* Fondo del header y del menú lateral */
+    --color-fondo-columna: #e8e8e8;
+    /* Fondo de las columnas */
+    --color-texto: #333;
+    /* Color del texto */
+    --color-texto-header: #ffffff;
+    /* Color del texto en el header */
+    --color-borde-tabla: #ddd;
+    /* Color de los bordes de las tablas */
+    --color-borde-columna: #160101;
+    /* Color de los bordes de las columnas */
+    --color-hover: #555;
+    /* Color de fondo al pasar el mouse sobre elementos */
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 html {
@@ -14,6 +36,8 @@ body {
     margin-right: 15%;
     border: #333 2px solid;
     font-family: Arial, sans-serif;
+    background-color: var(--color-fondo-general);
+    color: var(--color-texto);
 }
 
 .menu {
@@ -83,7 +107,7 @@ p {
     position: fixed;
     top: 140px;
     left: 258px;
-    background-color: #333;
+background-color: var(--color-fondo-header);
 }
 
 .menu-lateral ul li a {
@@ -96,7 +120,7 @@ p {
 }
 
 .menu-lateral ul li a:hover {
-    background-color: #555;
+    background-color: var(--color-hover);
 }
 
 /* Título fijo dentro de la sección */
@@ -120,15 +144,12 @@ main.mainCategoria {
     justify-content: space-between;
     border: 2px solid #333;
     padding: 0;
+    background-color: var(--color-fondo-columna);
 }
 
 .columna {
-    width: 48%;
-    /* Ocupa dos columnas por fila */
-    margin-bottom: 20px;
-    /* Espacio entre filas */
+    width: 50%;
     border: 2px solid #160101;
-    padding: 10px;
     scroll-margin-top: 150px;
 }
 
@@ -148,6 +169,7 @@ table {
     /* Ajusta el tamaño de la tabla a la columna */
     border-collapse: collapse;
     /* Evita espacios entre bordes */
+    background-color: var(--color-fondo-tabla);
 }
 
 th,
@@ -155,6 +177,7 @@ td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+    border: 1px solid var(--color-borde-tabla);
 }
 
 th {
@@ -225,3 +248,18 @@ form button {
 .derecha {
     right: 10px;
 }
+
+
+
+/*COLORES NO TOCAR*/
+body {
+    background-color: var(--color-fondo-general);
+    color: var(--color-texto);
+}
+
+
+
+
+
+
+
