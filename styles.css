@@ -1,22 +1,14 @@
+/* --------------------------------------CSS Inicial-------------------------------------- */
 :root {
     --color-fondo-general: #f4f4f4;
-    /* Fondo general de la página */
     --color-fondo-tabla: #ffffff;
-    /* Fondo de las tablas */
     --color-fondo-header: #333;
-    /* Fondo del header y del menú lateral */
     --color-fondo-columna: #e8e8e8;
-    /* Fondo de las columnas */
     --color-texto: #333;
-    /* Color del texto */
     --color-texto-header: #ffffff;
-    /* Color del texto en el header */
     --color-borde-tabla: #ddd;
-    /* Color de los bordes de las tablas */
     --color-borde-columna: #160101;
-    /* Color de los bordes de las columnas */
     --color-hover: #555;
-    /* Color de fondo al pasar el mouse sobre elementos */
 }
 
 * {
@@ -35,180 +27,58 @@ body {
     margin-left: 15%;
     margin-right: 15%;
     border: #333 2px solid;
-    font-family: Arial, sans-serif;
-    background-color: var(--color-fondo-general);
-    color: var(--color-texto);
+    background-color: #333;
+    color: #e9e4e4;
 }
 
 .menu {
     justify-content: space-around;
     text-align: center;
-    border: #333 2px solid;
     display: flex;
     list-style-type: none;
     background-color: #333;
-
-    padding: 0px;
-    /* Añadir la propiedad para que el menú sea fijo */
+    padding: 0;
     position: fixed;
     top: 0;
     width: 70%;
+    height: 48px;
     z-index: 1000;
+    border: 1px solid #e9e4e4;
 }
-.menu li {
 
-    border: #333 2px solid;
+.menu li {
     margin: 0 15px;
 }
-.menu li a {
 
-    border: #333 2px solid;
-    color: white;
+.menu li a {
+    color: #e9e4e4;
     text-decoration: none;
     padding: 10px 20px;
     display: block;
 }
 
 .menu li a:hover {
-    background-color: #555;
+    background-color: var(--color-hover);
 }
 
 main {
-    display: flex;
-    display: block;
-    border: #333 2px solid;
+    border: 1px solid #e9e4e4;
     padding: 5px;
+    width: 100.35%;
 }
 
-
-
-h1 {
+h1,
+p {
     display: flex;
     justify-content: center;
     margin: 2px;
     padding: 2px;
 }
 
-p {
-    display: flex;
-    justify-content: center;
-    margin: 2px;
-        padding: 2px;
-
-}
-
-
-
-
-
-
-/* CSS Categoria*/
-/* Menú lateral fijo */
-.menu-lateral {
-    position: fixed;
-    top: 140px;
-    left: 258px;
-background-color: var(--color-fondo-header);
-}
-
-.menu-lateral ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    display: block;
-    padding: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.menu-lateral ul li a:hover {
-    background-color: var(--color-hover);
-}
-
-/* Título fijo dentro de la sección */
-.tituloCatFijo {
-    position: fixed;
-    width: 70%;
-}
-
-/* Ajustes del área principal */
-main.mainCategoria {
-    margin-top: 7%;
-    margin-left: 125px;
-    width: 990px;
-    padding: 0;
-}
-
-/* Estilo para la sección de artículos */
-.articulo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border: 2px solid #333;
-    padding: 0;
-    background-color: var(--color-fondo-columna);
-}
-
-.columna {
-    width: 50%;
-    border: 2px solid #160101;
-    scroll-margin-top: 150px;
-}
-
-.columna p {
-    font-size: 16px;
-}
-
-/* Título centrado en cada categoría */
-.tituloCat {
-    display: flex;
-    justify-content: center;
-}
-
-/* Estilo básico para tablas */
-table {
-    width: 100%;
-    /* Ajusta el tamaño de la tabla a la columna */
-    border-collapse: collapse;
-    /* Evita espacios entre bordes */
-    background-color: var(--color-fondo-tabla);
-}
-
-th,
-td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-    border: 1px solid var(--color-borde-tabla);
-}
-
-th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-}
-
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-
-/*CSS Contacto*/
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-}
-
-form label,
-form input,
-form button {
-    margin-bottom: 10px;
-}
-
-
+/* --------------------------------------CSS Pagina Principal-------------------------------------- */
 .carrusel {
     position: relative;
     max-width: 1024px;
-    /* Cambia el tamaño del carrusel aquí */
     margin: auto;
     overflow: hidden;
 }
@@ -221,12 +91,10 @@ form button {
 .imagenes img {
     max-width: 100%;
     display: none;
-    /* Esconde todas las imágenes por defecto */
 }
 
 .imagenes img.activo {
     display: block;
-    /* Muestra la imagen activa */
 }
 
 .flecha {
@@ -250,43 +118,137 @@ form button {
     right: 10px;
 }
 
+/* --------------------------------------CSS Categoria-------------------------------------- */
+.contenido {
+    display: flex;
+    height: 100vh;
+}
 
+.menu-lateral {
+    flex: 1;
+    padding: 0;
+    height: 100%;
+    background-color: var(--color-fondo-header);
+    border: 1px solid #e9e4e4;
+}
 
-/*COLORES NO TOCAR*/
-body {
-    background-color: var(--color-fondo-general);
-    color: var(--color-texto);
+.menu-lateral ul {
+    list-style-type: none;
+}
+
+.menu-lateral ul li {
+    margin-bottom: 10px;
+}
+
+.menu-lateral ul li a {
+    text-decoration: none;
+    color: #e9e4e4;
+    font-size: 22px;
+    padding: 5px;
+    background-color: #333;
+    border: 0.5px solid #363535;
+    display: block;
+}
+
+.menu-lateral ul li a:hover {
+    background-color: var(--color-hover);
+}
+
+.mainCategoria {
+    flex: 11;
+    padding: 0px;
+    overflow-y: auto;
+}
+
+.articulo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #b8b8b8;
+}
+
+.columna {
+    width: 50%;
+    scroll-margin-top: 150px;
+    padding: 1px;
+}
+
+.columna p {
+    font-size: 16px;
+}
+
+.tituloCat,
+.tituloCatFijo {
+    display: flex;
+    justify-content: center;
+    color: #e9e4e4;
+    background-color: var(--color-fondo-header);
+    border: 1px solid #e9e4e4;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: var(--color-fondo-header);
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid var(--color-borde-tabla);
+    text-align: left;
+}
+
+td {
+    color: var(--color-borde-columna);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
 
-/*css contacto*/
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------CSS CONTACTO-------------------------------------- */
 .sin-iconos {
     justify-content: center;
     list-style-type: none;
     display: flex;
 }
-h2{
-    border: none;
-    justify-content: center;
-    justify-items: center;
+
+h2,
+.centrado {
     text-align: center;
     max-width: 600px;
-    background-color: var(--color-fondo-general)
+    background-color: var(--color-fondo-general);
 }
 
 .centrado {
-    justify-items: center;
-    text-align: center;
-    max-width: 600px; 
-    margin: 40px auto; 
+    margin: 40px auto;
     padding: 20px;
     border: 1px solid #ccc;
-    background-color: var(--color-fondo-general)
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
 
-
-
-
-
-
+form label,
+form input,
+form button {
+    margin-bottom: 10px;
+}
