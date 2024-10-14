@@ -26,7 +26,7 @@
     <main class="centrado">
         <h2>Formulario de contacto</h2>
         <br>
-        <form class="centrado">
+        <form class="centrado" novalidate onsubmit="return validar()">
             <br>
             <ul class="sin-iconos">
                 <li>
@@ -36,15 +36,19 @@
             </ul>
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required maxlength="50">
+            <span id="nombreError" style="display: none;"></span>
             
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            <span id="emailError" style="display: none;"></span>
 
             <label for="telefono">Teléfono:</label>
             <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{10}">
+            <span id="telefonoError" style="display: none;"></span>
             
             <button type="submit">Enviar</button>
         </form>
+        <div id="validacion"></div>
     </main>
 
     <script src="script.js"></script>

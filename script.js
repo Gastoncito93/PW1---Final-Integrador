@@ -22,3 +22,57 @@ function cambiarImagen(direccion) {
 
 // Cambia la imagen cada 3 segundos
 setInterval(() => cambiarImagen(1), 5000);
+
+
+// Validar formulario (contacto)
+
+function validar() {
+    const nombre = document.getElementById("nombre");
+    const telefono = document.getElementById("pe");
+    const email = document.getElementById("email");
+
+    let error = false;
+
+    const nombreError = document.getElementById("nombreError");
+    nombreError.style.display = "none";
+    if (nombre.value === "" || nombre.value.length > 30) {
+        nombreError.textContent = "El nombre de nombre no es válido.";
+        nombreError.style.display = "block";
+        error = true;
+    }
+
+    const telefonoError = document.getElementById("telefonoError");
+    telefonoError.style.display = "none";
+    if (telefono.value === "" || telefono.value.length > 200) {
+        telefonoError.textContent = "El telefono no es valido";
+        telefonoError.style.display = "block";
+        error = true;
+    }
+
+    const emailError = document.getElementById("emailError");
+    emailError.style.display = "none"; 
+    if (document.getElementById(email)!=="" && (document.getElementById(email))) {
+        emailError.textContent = "Ingrese un email válido.";
+        emailError.style.display = "block";
+        error = true;
+    }
+
+    if (!error) {
+        const resultado = document.getElementById("validacion");
+        resultado.innerHTML = "";
+        let textoResultado = document.createElement("h2");
+        textoResultado.innerHTML = "Estaremos en contacto.";
+        resultado.appendChild(textoResultado);
+    }
+
+    return !error;
+}
+function validarEmail(email) {
+    const emailRegex = /^[a-zA-Z0-9._%+-]{4,}@[a-zA-Z]+\.[a-zA-Z]+(\.[a-zA-Z]+)?$/;
+    return emailRegex.test(email);
+}
+function validarTel(telefono) {
+    const telRegex = /[0-9]{10,10}/;
+    return telRegex.test(telefono);
+}
+
