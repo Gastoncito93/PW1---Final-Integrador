@@ -24,11 +24,15 @@ function cambiarImagen(direccion) {
 setInterval(() => cambiarImagen(1), 5000);
 
 
-// Validar formulario (contacto)
+// Validar formulario contacto
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    validar(); 
+});
 
 function validar() {
     const nombre = document.getElementById("nombre");
-    const telefono = document.getElementById("pe");
+    const telefono = document.getElementById("telefono");
     const email = document.getElementById("email");
 
     let error = false;
@@ -43,15 +47,15 @@ function validar() {
 
     const telefonoError = document.getElementById("telefonoError");
     telefonoError.style.display = "none";
-    if (telefono.value === "" || telefono.value.length > 200) {
-        telefonoError.textContent = "El telefono no es valido";
+    if (!validarTel(telefono.value)) {
+        telefonoError.textContent = "El teléfono debe tener exactamente 10 dígitos numéricos.";
         telefonoError.style.display = "block";
         error = true;
     }
 
     const emailError = document.getElementById("emailError");
     emailError.style.display = "none"; 
-    if (document.getElementById(email)!=="" && (document.getElementById(email))) {
+    if (email.value === "" || !validarEmail(email.value)) { 
         emailError.textContent = "Ingrese un email válido.";
         emailError.style.display = "block";
         error = true;
@@ -68,11 +72,10 @@ function validar() {
     return !error;
 }
 function validarEmail(email) {
-    const emailRegex = /^[a-zA-Z0-9._%+-]{4,}@[a-zA-Z]+\.[a-zA-Z]+(\.[a-zA-Z]+)?$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z]+\.[a-zA-Z]+(\.[a-zA-Z]+)?$/;
     return emailRegex.test(email);
 }
 function validarTel(telefono) {
-    const telRegex = /[0-9]{10,10}/;
-    return telRegex.test(telefono);
+    const telRegex = /^\d{10}$/; 
+    return telRegex.test(telefono); 
 }
-
