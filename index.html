@@ -25,15 +25,12 @@
         <p>A continuacion mostramos los libros mas vendidos.</p>
     </main>
     <section class="seccion-carrousel">
-        <!-- se debe hacer carrusel con arreglos-->
         <div class="carrusel">
-            <div class="imagenes">
-                <img src="img/hoja.jpg" alt="Imagen 1" width="1500px" height="500px" class="activo">
-                <img src="img/mosaico.jpg" alt="Imagen 2" width="1500px" height="500px">
-                <img src="img/ojo.jpg" alt="Imagen 3" width="1500px" height="500px">
+            <div class="imagen-container">
+                <img src="" alt="Imagen" id="imagen">
             </div>
-            <button class="flecha izquierda" onclick="cambiarImagen(-1)">&#10094;</button>
-            <button class="flecha derecha" onclick="cambiarImagen(1)">&#10095;</button>
+            <button class="prev" onclick="cambiarImagen(-1)">&#10094;</button>
+            <button class="next" onclick="cambiarImagen(1)">&#10095;</button>
         </div>
 
     </section>
