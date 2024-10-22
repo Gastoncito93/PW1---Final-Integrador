@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="stylesheet" href="styles.css">
-    
 </head>
 <body>
     <header>
@@ -26,7 +25,7 @@
     <main class="centrado">
         <h2>Formulario de contacto</h2>
         <br>
-        <form class="centrado" id="contactForm" novalidate onsubmit="return validar()">
+        <form class="centrado" id="contactForm" novalidate>
             <br>
             <ul class="sin-iconos">
                 <li>
@@ -35,22 +34,23 @@
                 </li>
             </ul>
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" >
+            <input type="text" id="nombre" name="nombre">
             <span id="nombreError" style="display: none;"></span>
             
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" >
+            <input type="email" id="email" name="email">
             <span id="emailError" style="display: none;"></span>
 
             <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" >
+            <input type="tel" id="telefono" name="telefono">
             <span id="telefonoError" style="display: none;"></span>
             
             <button type="submit">Enviar</button>
         </form>
-        <div id="validacion"> </div>
+        <div id="validacion"></div>
     </main>
 
     <script src="script.js"></script>
 </body>
 </html>
+

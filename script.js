@@ -1,5 +1,13 @@
 //carrusel
-
+document.addEventListener("DOMContentLoaded", function() {
+    function mostrarImagen() {
+        const imgElement = document.getElementById('imagen');
+        if (imgElement) {
+            imgElement.src = imagenes[index]; // Asegúrate de que 'imagenes' y 'index' estén definidos
+        } else {
+            console.error("El elemento con ID 'imagen' no se encontró.");
+        }
+    }
 const imagenes = [
     'img/hoja.jpg',
     'img/mosaico.jpg',
@@ -17,61 +25,83 @@ function cambiarImagen(n) {
     index = (index + n + imagenes.length) % imagenes.length;
     mostrarImagen();
 }
-
 mostrarImagen();
-
-// Validar formulario contacto
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault(); 
-    validar(); 
 });
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("DOM completamente cargado.");
 
-function validar() {
-    const nombre = document.getElementById("nombre");
-    const telefono = document.getElementById("telefono");
-    const email = document.getElementById("email");
+    // Validar formulario contacto
+    const contactForm = document.getElementById("contactForm");
+    console.log("contactForm:", contactForm); // Esto debería mostrar el formulario en la consola
 
-    let error = false;
-
-    const nombreError = document.getElementById("nombreError");
-    nombreError.style.display = "none";
-    if (nombre.value === "" || nombre.value.length > 30) {
-        nombreError.textContent = "El nombre de nombre no es válido.";
-        nombreError.style.display = "block";
-        error = true;
+    if (contactForm) {
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            validar();
+        });
+    } else {
+        console.error("El formulario con ID 'contactForm' no se encontró.");
     }
 
-    const telefonoError = document.getElementById("telefonoError");
-    telefonoError.style.display = "none";
-    if (!validarTel(telefono.value)) {
-        telefonoError.textContent = "El teléfono debe tener exactamente 10 dígitos numéricos.";
-        telefonoError.style.display = "block";
-        error = true;
+    function validar() {
+        const nombre = document.getElementById("nombre").value;
+        const telefono = document.getElementById("telefono").value;
+        const email = document.getElementById("email").value;
+
+        let error = false;
+
+        // Validación de Nombre
+        const nombreError = document.getElementById("nombreError");
+        nombreError.style.display = "none";
+        if (nombre === "" || nombre.length > 40) {
+            mostrarError(nombreError, "El nombre debe tener entre 1 y 40 caracteres.");
+            error = true;
+        }
+
+        // Validación de Teléfono
+        const telefonoError = document.getElementById("telefonoError");
+        telefonoError.style.display = "none";
+        if (!validarTel(telefono)) {
+            mostrarError(telefonoError, "El teléfono debe tener exactamente 10 dígitos numéricos.");
+            error = true;
+        }
+
+        // Validación de Email
+        const emailError = document.getElementById("emailError");
+        emailError.style.display = "none";
+        if (email !== "" && !validarEmail(email)) {
+            mostrarError(emailError, "Ingrese un email válido.");
+            error = true;
+        }
+
+        if (!error) {
+            const resultado = document.getElementById("validacion");
+            resultado.innerHTML = "";
+            const textoResultado = document.createElement("h2");
+            let mensaje = `Estimado/a ${nombre}, nos contactaremos con usted al número ${telefono}`;
+            if (email) {
+                mensaje += ` o al correo ${email}`;
+            }
+
+            textoResultado.innerHTML = mensaje;
+            resultado.appendChild(textoResultado);
+        }
+
+        return !error;
     }
 
-    const emailError = document.getElementById("emailError");
-    emailError.style.display = "none"; 
-    if (email.value === "" || !validarEmail(email.value)) { 
-        emailError.textContent = "Ingrese un email válido.";
-        emailError.style.display = "block";
-        error = true;
+    function mostrarError(element, mensaje) {
+        element.textContent = mensaje;
+        element.style.display = "block";
     }
 
-    if (!error) {
-        const resultado = document.getElementById("validacion");
-        resultado.innerHTML = "";
-        let textoResultado = document.createElement("h2");
-        textoResultado.innerHTML = "Estaremos en contacto.";
-        resultado.appendChild(textoResultado);
+    function validarEmail(email) {
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z]+\.[a-zA-Z]+(\.[a-zA-Z]+)?$/;
+        return emailRegex.test(email);
     }
 
-    return !error;
-}
-function validarEmail(email) {
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z]+\.[a-zA-Z]+(\.[a-zA-Z]+)?$/;
-    return emailRegex.test(email);
-}
-function validarTel(telefono) {
-    const telRegex = /^\d{10}$/; 
-    return telRegex.test(telefono); 
-}
+    function validarTel(telefono) {
+        const telRegex = /^\d{10}$/;
+        return telRegex.test(telefono);
+    }
+});
