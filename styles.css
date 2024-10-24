@@ -20,15 +20,17 @@
 
 html {
     scroll-behavior: smooth;
-    background-color: #0080f8;
+    background-color: #002c55;
 }
 
 body {
     margin-top: 3%;
     margin-left: 15%;
     margin-right: 15%;
-    background-color: #009df8;
-    color: #e9e4e4;
+    background-color: #005f96;
+    border-radius: 20px;
+    color: #ffffffd2;
+    border: #ccc solid 2px;
 }
 
 .menu {
@@ -36,14 +38,15 @@ body {
     text-align: center;
     display: flex;
     list-style-type: none;
-    background-color: #333;
+    background-color: #0042bd;
     padding: 2px;
     position: fixed;
     top: 0;
     width: 70%;
     height: 48px;
     z-index: 1000;
-    border: 1px solid #e9e4e4;
+   border: #b8b8b8 2px solid;
+   border-radius: 20px ;
     font-size: 18px;
 }
 
@@ -62,14 +65,21 @@ body {
     background-color: var(--color-hover);
 }
 
-main {
-    border: 1px solid #e9e4e4;
-    padding: 5px;
-    width: 100.35%;
+main {    
+    border-radius: 20px;
+    width: 100%;
 }
 
-h1,
-p {
+h1 {
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    margin: 2px;
+    padding: 2px;
+}
+
+p{
+    font-size: 20px;
     display: flex;
     justify-content: center;
     margin: 2px;
@@ -79,13 +89,13 @@ p {
 /* --------------------------------------CSS Pagina Principal-------------------------------------- */
 .carrusel {
     position: relative;
-    max-width: 800px;
+    padding: 10px 100px;
     margin: auto;
-    overflow: hidden;
-    border: 2px solid #ddd;
+    overflow: hidden;    
 }
 
 .imagen-container {
+    padding-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,18 +112,22 @@ img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--color-hover);
+    background-color: #002c55;
+    border-radius: 20px;
     border: none;
     cursor: pointer;
-    padding: 10px;
-    font-size: 18px;
+    padding: 20px;
+    font-size: 25px;
+
 }
 
 .prev {
+    color: #ffffff;
     left: 10px;
 }
 
 .next {
+    color: #ffffff;
     right: 10px;
 }
 
