@@ -65,7 +65,7 @@ body {
     background-color: var(--color-hover);
 }
 
-main {    
+.mainPrincipal {    
     border-radius: 20px;
     width: 100%;
 }
@@ -132,6 +132,7 @@ img {
 }
 
 /* --------------------------------------CSS Categoria-------------------------------------- */
+
 .contenido {
     display: flex;
     height: 100vh;
@@ -142,8 +143,8 @@ img {
     flex: 1;
     padding: 0;
     height: 100%;
-    background-color: var(--color-fondo-header);
-    border: 1px solid #e9e4e4;
+    background-color: #005f96;
+    
 }
 
 .menu-lateral ul {
@@ -158,14 +159,17 @@ img {
     text-decoration: none;
     color: #e9e4e4;
     font-size: 22px;
+    justify-content: center;
     padding: 5px;
-    background-color: #333;
-    border: 0.5px solid #363535;
-    display: block;
+    background-color: #005f96;
+    border: 0.5px solid #ffffff;
+    display: flex;
+    border-radius: 5px;
+
 }
 
 .menu-lateral ul li a:hover {
-    background-color: var(--color-hover);
+    background-color: #0042bd;
 }
 
 .mainCategoria {
@@ -191,13 +195,19 @@ img {
     font-size: 16px;
 }
 
-.tituloCat,
-.tituloCatFijo {
-    
+.tituloCat{
     justify-content: center;
     color: #e9e4e4;
-    background-color: var(--color-fondo-header);
-    border: 1px solid #e9e4e4;
+    background-color: #005f96;
+    padding: 5px;
+    
+}
+.tituloCatFijo {
+    justify-content: center;
+    color: #e9e4e4;
+    background-color: #005f96;
+    padding: 5px;
+    border-radius: 20px;
 }
 
 table {
@@ -206,7 +216,7 @@ table {
 }
 
 thead {
-    background-color: var(--color-fondo-header);
+    background-color: #005f96;
 }
 
 th,
