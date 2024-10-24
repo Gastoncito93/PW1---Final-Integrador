@@ -1,22 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("DOM completamente cargado.");
 
     // Validar formulario contacto
     const contactForm = document.getElementById("contactForm");
-    console.log("contactForm:", contactForm); // Esto debería mostrar el formulario en la consola
 
     if (contactForm) {
         contactForm.addEventListener("submit", function (event) {
             event.preventDefault();
             validar();
         });
-    } else {
-        console.error("El formulario con ID 'contactForm' no se encontró.");
     }
 
     function validar() {
         const nombre = document.getElementById("nombre").value;
         const telefono = document.getElementById("telefono").value;
+        const opcionRadios = document.getElementsByName("opcion");
         const email = document.getElementById("email").value;
 
         let error = false;
@@ -36,6 +33,15 @@ document.addEventListener("DOMContentLoaded", function () {
             mostrarError(telefonoError, "El teléfono debe tener exactamente 10 dígitos numéricos.");
             error = true;
         }
+        //validar selección
+        const opcionError = document.getElementById("opcionError");
+            opcionError.style.display = "none";
+            const opcionSeleccionado = Array.from(opcionRadios).some(radio => radio.checked);
+            if (!opcionSeleccionado) {
+                opcionError.textContent = "Seleccione una opcion.";
+                opcionError.style.display = "block";
+                error = true;
+            }
 
         // Validación de Email
         const emailError = document.getElementById("emailError");

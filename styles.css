@@ -62,7 +62,7 @@ body {
 }
 
 .menu li a:hover {
-    background-color: var(--color-hover);
+    background-color: #002c55;
 }
 
 .mainPrincipal {    
@@ -245,19 +245,22 @@ tbody tr:nth-child(even) {
 
 h2,
 .centrado {
+    color: #e9e4e4;
+    border-radius: 20px;
     text-align: center;
     max-width: 600px;
-    background-color: #8b8b8b;
+    background-color: #002c55;
 }
 
 .centrado {
-    color: var(--color-texto);
+    color: #e9e4e4;
     margin: 40px auto;
     padding: 20px;
     border: 2px solid #ccc;
 }
 
 form {
+    border-radius: 20px;
     border: 1px solid #160101;
     display: flex;
     flex-direction: column;
@@ -266,15 +269,29 @@ form {
 
 form label,
 form input {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    padding-top: 5px;
 }
 
 form button {
+    color: #e9e4e4 ;
+    font-size: 20px;
+    background-color: #00396e;
+    border-radius: 5px;
+    border: 0.5px;
     margin-bottom: 10px;
+    margin-top: 15px;
 }
-
+ form button:hover {
+    background-color: #005f96;
+}
+.radio{
+    padding: 15px;
+}
 span {
     display: block;
-    margin-top: 5px;
     color: red;
+    margin-bottom: 10px;
 }

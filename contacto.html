@@ -28,11 +28,14 @@
         <form class="centrado" id="contactForm" novalidate>
             <br>
             <ul class="sin-iconos">
-                <li>
+                <li class="radio">
                     <label><input type="radio" name="opcion" value="trabajar"> Trabajar con nosotros. </label>
                     <label><input type="radio" name="opcion" value="publicitar"> Publicitar tu libro. </label>
+                    
                 </li>
             </ul>
+            <span id="opcionError" style="display: none;"></span>
+
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre">
             <span id="nombreError" style="display: none;"></span>
